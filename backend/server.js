@@ -4,8 +4,9 @@ dotenv.config({path: "./.env"});
 const app = require("./app");
 const port = process.env.PORT || 8000;
 const mongoose = require("mongoose");
+const passportSetup= require("./Passport")
 const DB = process.env.DATABASE.replace(
-  "<PASSWORD>",
+  "<password>",
   process.env.DATABASE_PASSWORD
 );
 mongoose
